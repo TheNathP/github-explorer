@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Explorer</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <span class="icon">🔎</span> <strong>GitHub Explorer</strong>
+      </div>
+      <form class="search-form">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search..."
+          autocomplete="off"
+        />
+        <button type="submit">Search</button>
+      </form>
+    </header>
+
+    <div class="global-status hidden"></div>
+
+    <main class="app-grid">
+      
+      <aside class="col-users column">
+        <div class="users-list-container">
+          <div class="placeholder-text">Recherchez un utilisateur pour commencer.</div>
+        </div>
+      </aside>
+
+      <section class="col-profile column">
+        <div class="profile-content hidden">
+          <div class="profile-header"></div>
+          <div class="repos-section">
+             <h3>Repositories</h3>
+             <ul class="repos-list"></ul>
+          </div>
+        </div>
+        <div class="profile-placeholder placeholder-text">
+          <p>Sélectionnez un utilisateur pour voir les détails.</p>
+        </div>
+      </section>
+
+      <aside class="col-commits column">
+        <div class="commits-content hidden">
+           <h3 class="commits-repo-title">Commits</h3>
+           <ul class="commits-list"></ul>
+        </div>
+        <div class="commits-placeholder placeholder-text">
+          Sélectionnez un repository pour voir les commits.
+        </div>
+      </aside>
+
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
